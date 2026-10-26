@@ -11,7 +11,14 @@ body{
   background-position: center;
   min-height: 100vh;
   color:red;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
+
 h1{
   display: flex;
   justify-content: center;
@@ -35,10 +42,10 @@ img{
   border: 1px solid black;
   border-radius: 12px;
   padding:1.25rem;
-  height: 500px;
+  height: 550px;
   width: 25%;
   margin-top: 5%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: grid;
   place-items: center;
   
@@ -64,14 +71,16 @@ align-items: center;
   border: 1px solid black;
   border-radius: 12px;
   padding:1.25rem;
-  height: 500px;
+  height: 550px;
   width: 25%;
   margin-top: 5%;
+  margin-left: 5%;
   font-size: 1.5rem;
   display: grid;
   place-items: center;
   
 }
+
 
 li{
   list-style: none;
@@ -93,13 +102,20 @@ margin-left:20%;
 }
 /* desktop */
 @media(max-width:1024px){
-  .card{
-    width:40%;
-    margin-left:30%;
-    font-size:1.75rem;
+  .cardCon{
+    gap:2rem;
+    padding:0 1.5rem;
   }
-  input{
-    margin-left: 40%;
+  .card,.cardTwo{
+    width: 45%;
+    margin-left: 0;
+    height: auto;
+    min-height: 500px;
+  }
+  .firstInput{
+    margin-left: 0;
+    display: block;
+    margin: 1rem auto;
   }
 }
 
@@ -111,17 +127,26 @@ margin-left:20%;
     text-align: center;
     padding:0 1rem;
   }
-  input{
-    display:block;
-    margin:1rem auto;
-    width:60%;
+  .cardCon{
+    gap:1.5rem;
+    padding:1rem;
+    flex-direction: column;
   }
-  .card{
-    width: 60%;
-    margin:5% auto 0;
-    height:auto;
-    min-height: 350px;
-    font-size: 1.5rem;
+  .card, .cardTwo{
+    width: 80%;
+    margin-top:1.5rem;;
+    min-height:0;
+
+  }
+  .card img {
+    margin: 0 auto;
+    height: 180px;
+  }
+  .cardTwo {
+    font-size: 1.2rem;
+  }
+  .createBtn{
+    margin-left: 0;
   }
 }
 
@@ -130,15 +155,19 @@ margin-left:20%;
   h1{
     font-size:1.4rem;
   }
-  input{
-    width:85%;
+ .card, .cardTwo{
+    width: 95%;
+   padding: 1rem;
+
   }
-  .card{
-    width:85%;
-    margin:8% auto 0;
-    padding:1rem;
-    min-height:300px;
-    font-size:1.2rem;
+   .card img {
+    height: 150px;
+  }
+
+  .cardTwo input ,
+  .firstInput{
+    font-size: 16px;
+    width: 100%;
   }
 }
 

@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Meddon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rye&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Create Your Character</title>
 </head>
 <body>
     <h1> Naruto Ninja Handbook</h1>
@@ -26,28 +29,12 @@
      <% for(let i=0; i<characters.length; i++) {%>
  <img src="<%= characters[i].image %> " alt="" style="max-width: 200px; display: none;">
   <% } %>
+  <div>
     <button type="button" class="deleteBtn">Delete</button>
     <button type="button" class="updateBtn">Update</button>
-
+</div>
     </section>
-<!-- 
-    <section class="cardCon">
- <% for(let i=0; i<characters.length; i++) {%>
-    <section class="card">
-    <h2> Name:</h2>
-    <p id="name"><%= characters[i].name %></p>
-    <h2> Ability:</h2>
-    <p id="ninjaAbility"><%= characters[i].signatureAbility %></p>
-    <h2>Age:</h2>
-    <p id="age"><%= characters[i].age %></p>
-    <h2>Village:</h2>
-    <p id="village"><%= characters[i].village %> </p>
-    <img src="<%= characters[i].image %> " id="pic" alt="">
-    <button type="button" class="deleteBtn">Delete</button>
-    <button type="button" class="updateBtn">Update</button>
 
-    </section>
-    <% } %> -->
  <section class="cardTwo">
 <form action="/makeCharacter" method="post">
     <ul>
