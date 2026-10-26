@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Naruto Ninja Handbook</h1>
+    <input type="text" class="firstInput">
+    <button class="infoBtn">Get Naruto Info</button>
+
+     <section class="cardCon">
+    <section class="card">
+    <h2> Name:</h2>
+    <p id="name"></p>
+    <h2> Ability:</h2>
+    <p id="ninjaAbility"></p>
+    <h2>Age:</h2>
+    <p id="age"></p>
+    <h2>Village:</h2>
+    <p id="village"></p>
+    <img  id="pic" alt="">
+     <% for(let i=0; i<characters.length; i++) {%>
+ <img src="<%= characters[i].image %> " alt="" style="max-width: 200px; display: none;">
+  <% } %>
+    <button type="button" class="deleteBtn">Delete</button>
+    <button type="button" class="updateBtn">Update</button>
+
+    </section>
+<!-- 
+    <section class="cardCon">
+ <% for(let i=0; i<characters.length; i++) {%>
+    <section class="card">
+    <h2> Name:</h2>
+    <p id="name"><%= characters[i].name %></p>
+    <h2> Ability:</h2>
+    <p id="ninjaAbility"><%= characters[i].signatureAbility %></p>
+    <h2>Age:</h2>
+    <p id="age"><%= characters[i].age %></p>
+    <h2>Village:</h2>
+    <p id="village"><%= characters[i].village %> </p>
+    <img src="<%= characters[i].image %> " id="pic" alt="">
+    <button type="button" class="deleteBtn">Delete</button>
+    <button type="button" class="updateBtn">Update</button>
+
+    </section>
+    <% } %> -->
+ <section class="cardTwo">
+<form action="/makeCharacter" method="post">
+    <ul>
+        <li>
+    <label for="addName">Name:</label>
+    <input type="text" id="addName" name="name" placeholder="Name Here" required>
+    </li>
+
+    <li>
+
+    <label for="addAbility">Ability:</label>
+    <input type="text" id="addAbility" name="signatureAbility" placeholder="Technique" required>
+    </li>
+
+    <li>
+
+    <label for="addAge">Age:</label>
+    <input type="text" id="addAge" name="age" placeholder="How Old" required>
+    </li>
+<li>
+    <label for="addVillage">Village:</label>
+    <input type="text" id="addVillage" name="village" placeholder="Where You From" required>
+    </li>
+    </ul>
+ <button type="submit" class="createBtn">Create Character</button>
+</form>
+    </section>
+</section>
+    <script src="main.js"></script>
+</body>
+</html>

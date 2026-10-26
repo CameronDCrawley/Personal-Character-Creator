@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -16,7 +17,7 @@ h1{
   justify-content: center;
 }
 
-input{
+.firstInput{
 margin-left: 45%;
 }
 
@@ -30,22 +31,114 @@ img{
  
 }
 .card{
-  background: white;
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid black;
   border-radius: 12px;
   padding:1.25rem;
-  height: 400px;
+  height: 500px;
   width: 25%;
-  margin-left:40% ;
   margin-top: 5%;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
   
 }
 
 .card img{
-  height:auto;
+  height:200px;
   width: auto;
   max-height: 300px;
   object-fit: contain;
+  margin-left: 10%;
 
 }
+.cardCon{
+  display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.cardTwo{
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
+  border-radius: 12px;
+  padding:1.25rem;
+  height: 500px;
+  width: 25%;
+  margin-top: 5%;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  
+}
+
+li{
+  list-style: none;
+}
+
+.cardTwo label{
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.cardTwo input{
+  width: 100%;
+  padding: 0.6rem;
+
+}
+.createBtn{
+margin-top: 2%; 
+margin-left:20%;
+}
+/* desktop */
+@media(max-width:1024px){
+  .card{
+    width:40%;
+    margin-left:30%;
+    font-size:1.75rem;
+  }
+  input{
+    margin-left: 40%;
+  }
+}
+
+/* tablets */
+
+@media(max-width:768px){
+  h1{
+    font-size: 1.75rem;
+    text-align: center;
+    padding:0 1rem;
+  }
+  input{
+    display:block;
+    margin:1rem auto;
+    width:60%;
+  }
+  .card{
+    width: 60%;
+    margin:5% auto 0;
+    height:auto;
+    min-height: 350px;
+    font-size: 1.5rem;
+  }
+}
+
+/* mobile */
+@media(max-width:480px){
+  h1{
+    font-size:1.4rem;
+  }
+  input{
+    width:85%;
+  }
+  .card{
+    width:85%;
+    margin:8% auto 0;
+    padding:1rem;
+    min-height:300px;
+    font-size:1.2rem;
+  }
+}
+
