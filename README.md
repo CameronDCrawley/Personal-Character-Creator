@@ -62,7 +62,7 @@ The server will start on http://localhost:3000 (or your configured port).
 
 
 
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/aaf36842-c3d3-4a03-a070-fcbcb68b4373" />
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/72839183-3c67-40c3-ac80-42fea98f1952" />
 
 
 
